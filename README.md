@@ -49,12 +49,5 @@ python ./inference_attention-map_score.py \
 
 
 
-## 📅 Schedule
-
-- [ ] Release the data (VQA and report generation tasks)
-
-- [ ] Release the training code
-
-
 ## 🙏Acknowledgement
 We use code from [LLaVA-Med](https://github.com/microsoft/LLaVA-Med), [RULE](https://github.com/richard-peng-xia/RULE), [MedKLIP](https://github.com/MediaBrain-SJTU/MedKLIP). We thank the authors for releasing their code.
