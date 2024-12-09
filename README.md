@@ -10,7 +10,7 @@
 ## 📦 Requirements
 1. Clone this repository and navigate to MMedPO folder
 ```bash
-git clone https://github.com/Kelvinz-89757/MMedPO.git
+git clone https://github.com/aiming-lab/MMedPO.git
 cd MMedPO
 ```
 
