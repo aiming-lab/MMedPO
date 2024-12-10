@@ -1,4 +1,4 @@
-# MMedPO: Aligning Medical Vision-Language Models with Clinical-Aware Multimodal Preference Optimization
+# [MMedPO: Aligning Medical Vision-Language Models with Clinical-Aware Multimodal Preference Optimization](https://arxiv.org/abs/2412.06141)
 
 
 ## 💡 Overview
