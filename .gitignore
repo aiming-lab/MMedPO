@@ -1,8 +1,0 @@
-
-# extra
-backup
-curation/Sample_Zero-Shot_Grounding_RSNA/model_weights
-curation/Sample_Zero-Shot_Grounding_RSNA/model_weights/checkpoint_final.pth
-*.pth
-
-
