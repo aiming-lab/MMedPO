@@ -6,3 +6,6 @@ curation/Sample_Zero-Shot_Grounding_RSNA/model_weights/checkpoint_final.pth
 *.pth
 
 
+train/dpo/docs
+train/dpo/playground
+train/dpo/wandb
