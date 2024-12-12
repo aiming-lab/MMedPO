@@ -46,7 +46,7 @@ python ./inference_attention-map_score.py \
     --annotation_save_root /path/to/save/annotation \
     --noised_image_save_root /path/to/save/noised_image \
 ```
-## Train
+## 🏋️ Train
 Use the script `train_dpo_visual-text.sh` in `./scripts` or the following command, make sure to specify the necessary data paths and the checkpoint saving location.
 ```
 deepspeed --include localhost:0,1,2,3 ./train/dpo/train_dpo_visual-text.py \
@@ -86,5 +86,5 @@ deepspeed --include localhost:0,1,2,3 ./train/dpo/train_dpo_visual-text.py \
     --lazy_preprocess True \
 ```
 
-## 🙏Acknowledgement
+## 🙏 Acknowledgement
 We use code from [LLaVA-Med](https://github.com/microsoft/LLaVA-Med), [RULE](https://github.com/richard-peng-xia/RULE), [MedKLIP](https://github.com/MediaBrain-SJTU/MedKLIP). We thank the authors for releasing their code.
