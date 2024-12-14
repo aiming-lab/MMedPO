@@ -86,5 +86,17 @@ deepspeed --include localhost:0,1,2,3 ./train/dpo/train_dpo_visual-text.py \
     --lazy_preprocess True \
 ```
 
+## 📚 Citation
+
+```bibtex
+@article{zhu2024mmedpo,
+  title={MMedPO: Aligning Medical Vision-Language Models with Clinical-Aware Multimodal Preference Optimization},
+  author={Zhu, Kangyu and Xia, Peng and Li, Yun and Zhu, Hongtu and Wang, Sheng and Yao, Huaxiu},
+  journal={arXiv preprint arXiv:2412.06141},
+  year={2024}
+}
+```
+
+
 ## 🙏 Acknowledgement
 We use code from [LLaVA-Med](https://github.com/microsoft/LLaVA-Med), [RULE](https://github.com/richard-peng-xia/RULE), [MedKLIP](https://github.com/MediaBrain-SJTU/MedKLIP). We thank the authors for releasing their code.
