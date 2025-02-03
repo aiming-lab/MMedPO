@@ -212,13 +212,9 @@ def generate_noised_image(image_paths, pred_maps):
     noised_images = []
 
     for i in range(len(image_paths)):
-        # Load the original image
         original_image = Image.open(image_paths[i])
         original_image = np.array(original_image)
-
-        # Resize pred_map to match the original image size using nearest interpolation
         pred_map = pred_maps[i]
-        # pred_map_resized = cv2.resize(pred_map, (original_image.shape[1], original_image.shape[0]), interpolation=cv2.INTER_NEAREST)
         pred_map_resized = cv2.resize(
             pred_map,
             (original_image.shape[1], original_image.shape[0]),
@@ -228,30 +224,14 @@ def generate_noised_image(image_paths, pred_maps):
         pred_map_resized = cv2.GaussianBlur(pred_map_resized, (15, 15), 0)
         mean_value = np.mean(pred_map_resized)
         std_value = np.std(pred_map_resized)
-
-        max_noise_strength = 10
-        # threshold = mean_value + std_value
         threshold = mean_value - std_value
-        # percentile_value = np.percentile(pred_map_resized, 90)
-        # Create a Gaussian noise mask based on the pred_map_resized
         noise = np.random.normal(
             0, 10, original_image.shape
-        )  # Adjust the mean and variance as needed
-
-        # pred_map_resized_expanded = np.expand_dims(pred_map_resized, axis=-1)  # Shape will become (624, 512, 1)
-        # pred_map_resized_expanded = np.repeat(pred_map_resized_expanded, 3, axis=-1)  # Now shape is (624, 512, 3)
-
-        # weighted_noise = noise * (pred_map_resized_expanded / np.max(pred_map_resized_expanded))* max_noise_strength
-
+        )  
         noised_image = original_image.copy()
-        # noised_image = noised_image.astype(np.float32)
 
         noised_image[pred_map_resized > threshold] = noise[pred_map_resized > threshold]
-        # noised_image[pred_map_resized > threshold] += weighted_noise[pred_map_resized > threshold]
-
         noised_image = np.clip(noised_image, 0, 255).astype(np.uint8)
-
-        # Append the noised image to the list
         noised_images.append(noised_image)
 
     return noised_images
