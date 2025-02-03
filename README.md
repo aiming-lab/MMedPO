@@ -26,9 +26,9 @@ pip install trl
 
 3. Download the required model checkpoints [LLaVA-Med-1.5](https://huggingface.co/microsoft/llava-med-v1.5-mistral-7b) from huggingface.
 
-For model checkpoints, we released four [checkpoints](https://huggingface.co/zky11235/mmedpo_checkpoints) of MMedPO in the huggingface.
+4. For model checkpoints, we released four [checkpoints](https://huggingface.co/zky11235/mmedpo_checkpoints) of MMedPO in the huggingface.
 
-4. For all the medical datasets, you need firstly apply for the right of access and then download the dataset.
+5. For all the medical datasets, you need firstly apply for the right of access and then download the dataset.
 
 - [MIMIC-CXR](https://physionet.org/content/mimic-cxr-jpg/2.0.0/)
 - [IU-Xray](https://drive.google.com/file/d/1c0BXEuDy8Cmm2jfN0YYGkQxFZd2ZIoLg/view) (Thanks to [R2GenGPT](https://github.com/wang-zhanyu/R2GenGPT) for sharing the file)
